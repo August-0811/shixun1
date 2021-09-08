@@ -1,2 +1,5 @@
 rootProject.name = "demo"
 include ':app'
+include ':mvvm'
+include ':common'
+include ':mvp'

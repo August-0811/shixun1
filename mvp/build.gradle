@@ -1,9 +1,6 @@
 plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-android-extensions'
+    id 'com.android.library'
 }
-
 def androidversions=rootProject.ext.android
 def libs=rootProject.ext.dependencies
 android {
@@ -16,7 +13,9 @@ android {
         versionCode androidversions.versionCode
         versionName androidversions.versionName
 
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -29,23 +28,24 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
 }
 
 dependencies {
 
-    implementation  libs.ankocommon
+    api libs.rxjava
+    api libs.rxandroid
+    api libs.retrofit
+    api libs.gson
+    api libs.rxjava2
+    api libs.okhttp
+    api libs.interceptor
 
+    api libs.dagger
+    annotationProcessor  libs.daggercompiler
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.1'
+    ///////////////////////////////////
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-    implementation project(path: ':mvp')
-    implementation project(path: ':common')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

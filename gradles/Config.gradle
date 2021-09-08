@@ -1,0 +1,51 @@
+def dependenciesVersion=rootProject.ext.dependenciesVersion
+ext{
+    dependencies=[
+            retrofit:"com.squareup.retrofit2:retrofit:$dependenciesVersion.retrofit",
+            retrofitgson:"com.squareup.retrofit2:converter-gson:$dependenciesVersion.retrofitgson",
+            retrofitrxjava:"com.squareup.retrofit2:adapter-rxjava2:$dependenciesVersion.retrofitrxjava",
+            okhttplog:"com.squareup.okhttp3:logging-interceptor:$dependenciesVersion.okhttplog",
+            gson:"com.google.code.gson:gson:$dependenciesVersion.gson",
+            rxandroid:"io.reactivex.rxjava2:rxandroid:$dependenciesVersion.rxandroid",
+            rxjava:"io.reactivex.rxjava2:rxjava:$dependenciesVersion.rxjava",
+            glide:"com.github.bumptech.glide:glide:$dependenciesVersion.glide",
+            material: "com.google.android.material:material:$dependenciesVersion.material",
+            banner:"com.youth.banner:banner:$dependenciesVersion.banner",
+            room : "androidx.room:room-runtime:$dependenciesVersion.room_version",
+            roomcompiler : "androidx.room:room-compiler:$dependenciesVersion.room_version", // For Kotlin use kapt instead of annotationProcessor
+            smart :  "com.scwang.smart:refresh-layout-kernel:$dependenciesVersion.smart",      //核心必须依赖
+            smartradar:  "com.scwang.smart:refresh-header-radar:$dependenciesVersion.smart",       //雷达刷新头
+            smartball :  "com.scwang.smart:refresh-footer-ball:$dependenciesVersion.smart"  ,      //球脉冲加载
+            arouter: "com.alibaba:arouter-api:$dependenciesVersion.arouter",
+            aroutercompiler:"com.alibaba:arouter-compiler:$dependenciesVersion.aroutercompiler",
+            chart:"com.github.PhilJay:MPAndroidChart:$dependenciesVersion.chart",
+
+
+            //kotlin在模块中需要添加的依赖
+            ankocommon : "org.jetbrains.anko:anko-common:$anko_version",
+
+
+            rxjava:"io.reactivex.rxjava2:rxjava:$dependenciesVersion.rxjava",
+            rxandroid:"io.reactivex.rxjava2:rxandroid:$dependenciesVersion.rxandroid",
+            //Retrofit依赖
+            retrofit:"com.squareup.retrofit2:retrofit:$dependenciesVersion.retrofit",
+            //Gson converter gson解析
+            gson:"com.squareup.retrofit2:converter-gson:$dependenciesVersion.gson",
+            //RxJava2 Adapter
+            rxjava2:"com.squareup.retrofit2:adapter-rxjava2:$dependenciesVersion.rxjava2",
+            //okhttp
+            okhttp:"com.squareup.okhttp3:okhttp:$dependenciesVersion.okhttp",
+            interceptor:"com.squareup.okhttp3:logging-interceptor:$dependenciesVersion.interceptor",
+
+
+            //Dagger2 依赖注入框架
+            dagger:"com.google.dagger:dagger:$dependenciesVersion.dagger",
+            daggercompiler:"com.google.dagger:dagger-compiler:$dependenciesVersion.daggercompiler",
+
+            glide: "com.github.bumptech.glide:glide:$dependenciesVersion.glide",
+    ]
+
+    urls=[
+
+    ]
+}
